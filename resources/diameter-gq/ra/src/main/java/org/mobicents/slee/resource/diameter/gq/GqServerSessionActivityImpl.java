@@ -207,4 +207,10 @@ public class GqServerSessionActivityImpl extends GqSessionActivityImpl implement
     this.session.release();
     super.endActivity();
   }
+
+  @Override
+  public void delayedEndActivity() {
+    this.setTerminateAfterProcessing(true);
+    super.baseListener.startActivityRemoveTimer(getActivityHandle());
+  }
 }

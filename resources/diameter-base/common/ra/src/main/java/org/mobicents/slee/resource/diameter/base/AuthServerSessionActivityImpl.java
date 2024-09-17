@@ -202,4 +202,10 @@ public class AuthServerSessionActivityImpl extends AuthSessionActivityImpl imple
     this.serverSession.release();
     super.endActivity();
   }
+
+  @Override
+  public void delayedEndActivity() {
+    this.setTerminateAfterProcessing(true);
+    super.baseListener.startActivityRemoveTimer(getActivityHandle());
+  }
 }

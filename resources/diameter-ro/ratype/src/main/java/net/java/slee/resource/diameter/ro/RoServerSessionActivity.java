@@ -59,5 +59,5 @@ public interface RoServerSessionActivity extends RoSessionActivity {
   public void sendRoCreditControlAnswer(RoCreditControlAnswer cca) throws IOException;
 
   public void sendReAuthRequest(ReAuthRequest rar) throws java.io.IOException;
-
+  public void delayedEndActivity();
 }

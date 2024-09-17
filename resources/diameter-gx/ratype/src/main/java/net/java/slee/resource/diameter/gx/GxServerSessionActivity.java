@@ -62,4 +62,5 @@ public interface GxServerSessionActivity extends GxSessionActivity {
      * @throws IOException if an error occurred while sending the message to the client.
      */
     void sendGxReAuthRequest(GxReAuthRequest rar) throws IOException;
+    void delayedEndActivity();
 }

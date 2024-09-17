@@ -67,5 +67,5 @@ public interface AccountingServerSessionActivity extends AccountingSessionActivi
    * @throws IllegalArgumentException if accountingAnswer is missing any required AVPs
    */
   void sendAccountingAnswer(AccountingAnswer aca) throws IOException, IllegalArgumentException;
-
+  void delayedEndActivity();
 }

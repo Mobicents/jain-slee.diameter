@@ -79,4 +79,5 @@ public interface GqServerSessionActivity extends GqSessionActivity {
   public void sendGqSessionTerminationAnswer(GqSessionTerminationAnswer sta) throws IOException;
 
   public void sendAbortSessionRequest(GqAbortSessionRequest asr) throws java.io.IOException;
+  public void delayedEndActivity();
 }

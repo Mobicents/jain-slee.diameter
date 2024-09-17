@@ -65,5 +65,5 @@ public interface RfServerSessionActivity extends RfSessionActivity {
    * @throws IllegalArgumentException if accountingAnswer is missing any required AVPs
    */
   public void sendRfAccountingAnswer(RfAccountingAnswer accountingAnswer) throws IOException, IllegalArgumentException;
-
+  public void delayedEndActivity();
 }

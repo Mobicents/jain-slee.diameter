@@ -54,4 +54,5 @@ public interface RxServerSessionActivity extends RxSessionActivity {
 
   void sendAbortSessionRequest(AbortSessionRequest asr) throws IOException;
 
+  void delayedEndActivity();
 }

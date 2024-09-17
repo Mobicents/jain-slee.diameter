@@ -90,5 +90,5 @@ public interface AuthServerSessionActivity extends AuthSessionActivity {
    * @throws IOException 
    */
   void sendSessionTerminationAnswer(SessionTerminationAnswer request) throws IOException;
-
+  void delayedEndActivity();
 }

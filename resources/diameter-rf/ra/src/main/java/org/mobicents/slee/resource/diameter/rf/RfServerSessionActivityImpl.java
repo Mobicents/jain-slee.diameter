@@ -253,6 +253,11 @@ public class RfServerSessionActivityImpl extends RfSessionActivityImpl implement
     super.endActivity();
   }
 
+  @Override
+  public void delayedEndActivity() {
+    this.setTerminateAfterProcessing(true);
+    super.baseListener.startActivityRemoveTimer(getActivityHandle());
+  }
   /*
    * (non-Javadoc)
    * 

@@ -204,4 +204,10 @@ public class AccountingServerSessionActivityImpl extends AccountingSessionActivi
     super.endActivity();
   }
 
+  @Override
+  public void delayedEndActivity() {
+    this.setTerminateAfterProcessing(true);
+    super.baseListener.startActivityRemoveTimer(getActivityHandle());
+  }
+
 }
