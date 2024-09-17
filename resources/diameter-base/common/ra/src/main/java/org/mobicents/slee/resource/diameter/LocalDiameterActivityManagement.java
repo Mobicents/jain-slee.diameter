@@ -84,7 +84,7 @@ public class LocalDiameterActivityManagement implements DiameterActivityManageme
    * (org.mobicents.slee.resource.diameter.base.DiameterActivityHandle)
    */
   public void startActivityRemoveTimer(DiameterActivityHandle handle) {
-    if(this.activities.contains(handle)) {
+    if(this.activities.containsKey(handle)) {
       ActivityRemoveTimerTask task = new ActivityRemoveTimerTask(handle);
       this.removeMap.put(handle, task);
       this.timer.schedule(new ActivityRemoveTimerTask(handle), delay);
